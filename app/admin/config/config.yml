@@ -88,8 +88,16 @@ fos_rest:
     body_converter:
         enabled: true
         validate: true
+    view:
+        view_response_listener: force
+    body_listener: true
+    param_fetcher_listener: true
+    body_converter:
+        enabled: true
 
 sensio_framework_extra:
+    view:    { annotations: false }
+    router:  { annotations: true }
     request: { converters: true }
 
 sulu_core:
